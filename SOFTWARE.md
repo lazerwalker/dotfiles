@@ -3,10 +3,11 @@
 ## Installed via [Brew](http://brew.sh)
 
 * git
+* keybase
 * macvim
 * zsh
 
-`brew install git macvim zsh`
+`brew install git keybase macvim zsh`
 
 
 ## Installed via [Brew Cask](https://caskroom.github.io)
