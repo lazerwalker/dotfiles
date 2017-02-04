@@ -29,3 +29,10 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Disable keyboard autocorrect
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Set hostname
+# sudo scutil --set ComputerName "newhostname" && \
+# sudo scutil --set HostName "newhostname" && \
+# sudo scutil --set LocalHostName "newhostname" && \
+# sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "newhostname"
+
