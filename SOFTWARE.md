@@ -15,13 +15,14 @@
 * alfred
 * android-studio
 * bettertouchtool
-* chrome
+* caffeine
 * crashplan
 * dash
 * dropbox
 * dropshare
 * fantastical
 * flux
+* google-chrome
 * iterm2
 * macdown
 * omnifocus
@@ -29,7 +30,7 @@
 * sync
 * visual-studio-code
 
-`brew cask install 1password alfred android-studio bettertouchtool chrome crashplan dash dropbox dropshare fantastical flux iterm2 macdown omnifocus slack sync visual-studio-code`
+`brew cask install 1password alfred android-studio bettertouchtool caffeine google-chrome crashplan dash dropbox dropshare fantastical flux iterm2 macdown omnifocus slack sync visual-studio-code`
 
 
 ## Installed via Mac App Store
