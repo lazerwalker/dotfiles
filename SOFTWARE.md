@@ -6,7 +6,7 @@
 * macvim
 * zsh
 
-`brew install macvim zsh`
+`brew install git macvim zsh`
 
 
 ## Installed via [Brew Cask](https://caskroom.github.io)
