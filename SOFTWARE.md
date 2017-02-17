@@ -23,16 +23,22 @@
 * dropshare
 * fantastical
 * flux
+* gcc
 * google-chrome
 * iterm2
 * macdown
+* npm
+* nvalt
 * omnifocus
 * slack
 * sync
 * visual-studio-code
 
-`brew cask install 1password alfred android-studio bettertouchtool caffeine google-chrome crashplan dash dropbox dropshare fantastical flux iterm2 macdown omnifocus slack sync visual-studio-code`
+`brew cask install 1password alfred android-studio bettertouchtool caffeine gcc oogle-chrome crashplan dash dropbox dropshare fantastical flux iterm2 macdown npm omnifocus slack sync visual-studio-code`
 
+### QuickLook Plugins:
+
+`brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook qlvideo`
 
 ## Installed via Mac App Store
 
@@ -45,7 +51,7 @@
 * Pixen
 * PomodoroApp
 * Scope
-* Solver
+* Soulver
 * The Unarchiver
 * Tweetbot
 * Xcode
