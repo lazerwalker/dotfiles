@@ -61,3 +61,4 @@
 ## Other
 
 * SoundSource (Rogue Amoeba — check later to see if it gets added to brew cask?)
+* ScanSnap Manager
