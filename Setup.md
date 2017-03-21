@@ -73,3 +73,22 @@ Copy in config files
 * Set keyboard shorcut to Cmd+Shift+N
 
 ## Dropshare
+* Set screenshot folder: `defaults write com.apple.screencapture location ~/Sync/Screenshots; killall SystemUIServer`
+* Settings
+    * General
+        * Start Dropshare at login
+        * Install CLI Tools
+    * Connection
+        * Bucket name: uploads.lazerwalker.com
+        * Keys: (Get from AWS)
+        * Domain alias: uploads.lazerwalker.com
+    * Uploads
+        * Follow instructions to set up bit.ly URL shortener: https://dropshare.zendesk.com/hc/en-us/articles/201268771-How-to-set-up-a-custom-URL-shortener
+    * Screenshots
+        * Legacy Mode -> Enable Legacy Mode (system shortcut using folder)
+    * Sync: Use it.
+    
+
+## Bartender
+
+* Use common sense?
