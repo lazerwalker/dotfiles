@@ -18,7 +18,9 @@
 * bartender
 * bettertouchtool
 * caffeine
+* cloak
 * crashplan
+* daisydisk
 * dash
 * dropbox
 * dropshare
@@ -35,7 +37,7 @@
 * sync
 * visual-studio-code
 
-`brew cask install 1password alfred android-studio bettertouchtool caffeine gcc oogle-chrome crashplan dash dropbox dropshare fantastical flux iterm2 macdown npm omnifocus slack sync visual-studio-code`
+`brew cask install 1password alfred android-studio bartender bettertouchtool caffeine cloak crashplan daisydisk dash dropbox dropshare fantastical flux gcc google-chrome iterm2 macdown npm nvalt omnifocus slack sync visual-studio-code`
 
 ### QuickLook Plugins:
 
