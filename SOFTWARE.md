@@ -3,11 +3,12 @@
 ## Installed via [Brew](http://brew.sh)
 
 * git
+* hub
 * keybase
 * macvim
 * zsh
 
-`brew install git keybase macvim zsh`
+`brew install git hub keybase macvim zsh`
 
 
 ## Installed via [Brew Cask](https://caskroom.github.io)
@@ -35,9 +36,10 @@
 * omnifocus
 * slack
 * sync
+* vlc
 * visual-studio-code
 
-`brew cask install 1password alfred android-studio bartender bettertouchtool caffeine cloak crashplan daisydisk dash dropbox dropshare fantastical flux gcc google-chrome iterm2 macdown npm nvalt omnifocus slack sync visual-studio-code`
+`brew cask install 1password alfred android-studio bartender bettertouchtool caffeine cloak crashplan daisydisk dash dropbox dropshare fantastical flux gcc google-chrome iterm2 macdown npm nvalt omnifocus slack sync vlc visual-studio-code`
 
 ### QuickLook Plugins:
 
