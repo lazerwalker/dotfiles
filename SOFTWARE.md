@@ -4,11 +4,12 @@
 
 * gcc
 * git
+* gpg2
 * hub
 * macvim
 * zsh
 
-`brew install git hub gcc macvim zsh`
+`brew install git hub gcc gpg2 macvim zsh`
 
 
 ## Installed via [Brew Cask](https://caskroom.github.io)

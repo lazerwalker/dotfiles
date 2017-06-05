@@ -1,10 +1,12 @@
-# App-Specific Setup
-
-## Shell
-**Change shell to zsh**
-`chsh -s /bin/zsh`
-
-Installing `.oh-my-zsh` and `.zshrc` should be sufficient to set up oh-my-zsh.
+* Install Homebrew, and `brew tap caskroom/cask`
+* Log into MAS and install MAS things
+* Install `brew` / `brew cask` things
+* Generate SSH keys, add to GitHub
+* clone dotfiles
+* `./systemDefaults.sh`
+* `./symlinks.sh`
+* change shell to zsh `chsh -s /bin/zsh`, and install oh-my-zsh (TODO: can I just add .oh-my-zsh to git and symlink it in?)
+* install RVM and `gem install xcode-install` and 
 
 * Bashmarks (wait til I have zsh config)
 * Configure visor
@@ -20,11 +22,15 @@ VS Code already has Solarized installed.
 
 ## Use Fira Code as a code font
 
+* Open Fira Code -> ttf -> add all fonts to font book
+
 ## Alfred
-Copy in files?
+* Keyboard -> Shortcuts -> Spotlight -> remove Cmd+Space
+* Activate PowerPack (in 1p)
+* TODO: Can I symlink in config?
 
 ## VS Code
-Copy in config files
+* Config is handled by `symlinks.sh`
 
 ## BetterTouchTool
 * License is in 1password
@@ -37,6 +43,7 @@ Copy in config files
 
 ## Fantastical
 * Set shortcut to Cmd+Shift+C
+* License is in 1password
 
 ## Safari
 * Set default browser to DuckDuckGo
@@ -59,8 +66,7 @@ Copy in config files
 * Hidden by defualt
 
 ## VS Code
-* Cmd+P: Install ‘code’ shell command
-* Grab config files
+* Config files covered by symlink.sh
 
 ## Keybase
 
@@ -68,9 +74,16 @@ Copy in config files
 
 ## OmniFocus
 * Set keyboard shortcut to Cmd+Shift+O
+* Log in with OmniSyncServer
+* License in 1p
 
 ## nvAlt
 * Set keyboard shorcut to Cmd+Shift+N
+* Log in with Simplenote
+
+## iTerm
+* Set font to Fira Code
+* Open Solarized iterm folder, open .itermcolors files, set Preferences -> Profiles -> Colors -> Load Presets
 
 ## Dropshare
 * Set screenshot folder: `defaults write com.apple.screencapture location ~/Sync/Screenshots; killall SystemUIServer`
