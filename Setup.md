@@ -4,7 +4,7 @@
 * Generate SSH keys, add to GitHub
 * clone dotfiles
 * `./systemDefaults.sh`
-* Install oh-my-zsh (This sets zsh as my custom shell. `symlinks.sh` adds my custom zshrc and my custom oh-my-zsh plugins)
+* Install oh-my-zsh (This sets zsh as my custom shell. `symlinks.sh` adds my custom oh-my-zsh plugins)
 * `./symlinks.sh`
 * install RVM and `gem install xcode-install` and 
 

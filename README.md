@@ -8,3 +8,4 @@ This repo is designed to contain everything I need to set up a new (Mac) compute
 
 Maybe you'll find some of this useful.
 
+TODO: My zshrc isn't currently being proper symlinked.
