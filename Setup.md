@@ -4,8 +4,8 @@
 * Generate SSH keys, add to GitHub
 * clone dotfiles
 * `./systemDefaults.sh`
+* Install oh-my-zsh (This sets zsh as my custom shell. `symlinks.sh` adds my custom zshrc and my custom oh-my-zsh plugins)
 * `./symlinks.sh`
-* change shell to zsh `chsh -s /bin/zsh`, and install oh-my-zsh (TODO: can I just add .oh-my-zsh to git and symlink it in?)
 * install RVM and `gem install xcode-install` and 
 
 * Bashmarks (wait til I have zsh config)
@@ -103,5 +103,4 @@ VS Code already has Solarized installed.
     
 
 ## Bartender
-
 * Use common sense?

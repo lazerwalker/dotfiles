@@ -5,3 +5,4 @@ ln -s "$dir/vscode/keybindings.json" ~/Library/Application\ Support/Code/User/ke
 ln -s "$dir/vscode/settings.json" ~/Library/Application\ Support/Code/User/settings.json
 
 ln -s "$dir/zshrc" ~/.zshrc
+ln -s "$dir/ohmyzsh-custom" ~/.oh-my-zsh/custom
