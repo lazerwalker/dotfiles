@@ -19,7 +19,8 @@
 6. Install RVM: http://rvm.io
 7. Get the latest Ruby: `rvm list known` && `rvm install [VERSION]`
 8. Install xcode-install: `gem install xcode-install`
-9. Install Bashmarks: https://github.com/huyng/bashmarks
+9. Download the latest Xcode: `xcversion list --all` && `xcversion install [LATEST]`
+10. Install Bashmarks: https://github.com/huyng/bashmarks
 
 
 **Install Solarized for iTerm** 
