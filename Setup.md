@@ -1,15 +1,26 @@
-* Install Homebrew, and `brew tap caskroom/cask`
-* Log into MAS and install MAS things
-* Install `brew` / `brew cask` things
-* Generate SSH keys, add to GitHub
-* clone dotfiles
-* `./systemDefaults.sh`
-* Install oh-my-zsh (This sets zsh as my custom shell. `symlinks.sh` adds my custom oh-my-zsh plugins)
-* `./symlinks.sh`
-* install RVM and `gem install xcode-install` and 
+## Install the Installers
 
-* Bashmarks (wait til I have zsh config)
-* Configure visor
+1. Install homebrew: https://brew.sh (it should be a shell one-liner)
+2. Install Brew Cask: `brew tap caskroom/cask`
+3. Install `brew` and `brew cask` things
+
+## Install Software
+1. Install Homebrew software (see SOFTWARE.md)
+2. Install Brew Cask software (see SOFTWARE.md)
+3. Install QuickLook plugins (see SOFTWARE.md)
+4. Log into MAS and install MAS things (see SOFTWARE.md)
+
+## Dev and pref setup
+1. Generate SSH keys, add to GitHub
+2. Clone this repo
+3. Set up macOS prefs: `./systemDefaults.sh`
+4. Install oh-my-zsh (This sets zsh as my custom shell. `symlinks.sh` adds my custom oh-my-zsh plugins)
+5. Set up symlinks `./symlinks.sh`
+6. Install RVM: http://rvm.io
+7. Get the latest Ruby: `rvm list known` && `rvm install [VERSION]`
+8. Install xcode-install: `gem install xcode-install`
+9. Install Bashmarks: https://github.com/huyng/bashmarks
+
 
 **Install Solarized for iTerm** 
 
@@ -69,7 +80,6 @@ VS Code already has Solarized installed.
 * Config files covered by symlink.sh
 
 ## Keybase
-
 `keybase install`, use an existing device to provision
 
 ## OmniFocus
