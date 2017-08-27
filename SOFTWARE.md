@@ -22,12 +22,9 @@
 * Paprika
 * Pixelmator
 * Pixen
-* PomodoroApp
-* Scope
 * Soulver
 * The Unarchiver
 * Tweetbot
-* Xcode
 
 
 ## Other
