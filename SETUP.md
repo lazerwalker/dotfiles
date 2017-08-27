@@ -58,7 +58,7 @@ VS Code already has Solarized installed.
 * License is in 1password
 
 ## Safari
-* Set default browser to DuckDuckGo
+* Set default browser to DuckDuckGo: Open new browser tab, click magnifying glass in search/URL bar, click DDG
 
 ## Keyboard Settings
 * Caps lock as ctrl
@@ -81,11 +81,12 @@ VS Code already has Solarized installed.
 * Config files covered by symlink.sh
 
 ## Keybase
-`keybase install`, use an existing device to provision
+* Install things: `keybase install`
+* Provision the new device: `keybase login` and use another device to provision
 
 ## OmniFocus
+* Log in with OmniSyncServer (info in 1password
 * Set keyboard shortcut to Cmd+Shift+O
-* Log in with OmniSyncServer
 * License in 1p
 
 ## nvAlt
@@ -115,3 +116,7 @@ VS Code already has Solarized installed.
 
 ## Bartender
 * Use common sense?
+
+## Sync
+* User/password in 1password
+* Set folder to inside /Users/lazerwalker
