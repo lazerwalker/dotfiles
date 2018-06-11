@@ -3,5 +3,6 @@
     "editor.fontFamily": "Fira Code",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
-    "window.zoomLevel": -1
+    "window.zoomLevel": -1,
+    "editor.tabSize": 2
 }

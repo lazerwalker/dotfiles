@@ -20,8 +20,14 @@
 7. Get the latest Ruby: `rvm list known` && `rvm install [VERSION]`
 8. Install xcode-install: `gem install xcode-install`
 9. Download the latest Xcode: `xcversion list --all` && `xcversion install [LATEST]`
-10. Install Bashmarks: https://github.com/huyng/bashmarks
+10. Get nvm
+11. Install Bashmarks: https://github.com/huyng/bashmarks
 
+
+## Safari
+* Install 1password extension
+* Ghostery
+* AdBlock
 
 **Install Solarized for iTerm** 
 
@@ -69,6 +75,7 @@ VS Code already has Solarized installed.
 * Disable data detectors
 * Disable force click
 * Disable mission control swipe
+* Enable tap to click
 
 ## Siri Settings
 * Move from Cmd+Space to Option+Space

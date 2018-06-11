@@ -31,8 +31,8 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Set hostname
-# sudo scutil --set ComputerName "newhostname" && \
-# sudo scutil --set HostName "newhostname" && \
-# sudo scutil --set LocalHostName "newhostname" && \
-# sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "newhostname"
+sudo scutil --set ComputerName "calculon" && \
+sudo scutil --set HostName "calculon" && \
+sudo scutil --set LocalHostName "calculon" && \
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "calculon"
 
