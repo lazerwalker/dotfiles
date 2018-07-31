@@ -23,7 +23,6 @@
 10. Get nvm
 11. Install Bashmarks: https://github.com/huyng/bashmarks
 
-
 ## Safari
 * Install 1password extension
 * Ghostery
@@ -39,8 +38,11 @@ I typically set everything to Solarized Dark, except Terminal.app gets Solarized
 VS Code already has Solarized installed.
 
 ## Use Fira Code as a code font
-
+* Download la1test version from https://github.com/tonsky/FiraCode
 * Open Fira Code -> ttf -> add all fonts to font book
+
+# Mail / Calendar / Etc
+* In my mail account settings, go to create a new app password. It'll have a one-click config download link.
 
 ## Alfred
 * Keyboard -> Shortcuts -> Spotlight -> remove Cmd+Space

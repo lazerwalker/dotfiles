@@ -2,7 +2,7 @@
 
 ## Installed via [Brew](http://brew.sh)
 
-`brew install git hub gcc gpg2 macvim zsh`
+`brew install git hub gcc gpg2 macvim zsh mas`
 
 
 ## Installed via [Brew Cask](https://caskroom.github.io)
@@ -16,9 +16,8 @@
 ## Installed via Mac App Store
 
 * Classic Color Meter
-* Deckset
 * HTTP Client
-* Noizio
+* Noiziok
 * Paprika
 * Pixelmator
 * Pixen
@@ -26,8 +25,10 @@
 * The Unarchiver
 * Tweetbot
 
+`mas install 451640037 418138339 928871589 1303222628 964792805 525180431  413965349 425424353 1384080005` 
 
 ## Other
-
+* Deckset
+* Unity
 * SoundSource (Rogue Amoeba — check later to see if it gets added to brew cask?)
 * ScanSnap Manager

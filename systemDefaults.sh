@@ -36,3 +36,10 @@ sudo scutil --set HostName "calculon" && \
 sudo scutil --set LocalHostName "calculon" && \
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "calculon"
 
+# Dock settings
+defaults write com.apple.dock static-only -bool true
+defaults write com.apple.dock magnification -bool false
+defaults write com.apple.dock 'orientation' -string 'left'
+defaults write com.apple.dock autohide -bool true
+
+killall Dock
