@@ -1,3 +1,9 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 alias gcah="git commit --amend -CHEAD"
 
 eval "$(hub alias -s)"
@@ -102,3 +108,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Fastlane path
+export PATH="$HOME/.fastlane/bin:$PATH"
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/lazerwalker/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /Users/lazerwalker/.npm/_npx/9617/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/lazerwalker/.npm/_npx/9617/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
