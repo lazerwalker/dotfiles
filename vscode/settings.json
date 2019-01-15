@@ -1,8 +1,13 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.fontFamily": "Fira Code",
-    "editor.fontSize": 14,
-    "editor.fontLigatures": true,
-    "window.zoomLevel": -1,
-    "editor.tabSize": 2
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "window.zoomLevel": 0,
+  "editor.tabSize": 2,
+  "tslint.autoFixOnSave": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "team.showWelcomeMessage": false,
+  "breadcrumbs.enabled": true
 }
