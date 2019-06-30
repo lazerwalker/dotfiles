@@ -1,8 +1,8 @@
 [credential]
 	helper = osxkeychain
 [user]
-	name = Mike Lazer-Walker
-	email = michael@lazerwalker.com
+	name = Em Lazer-Walker
+	email = me@lazerwalker.com
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
