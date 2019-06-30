@@ -3,11 +3,11 @@
   "editor.fontFamily": "Fira Code",
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
-  "editor.formatOnSave": true,
   "window.zoomLevel": 0,
   "editor.tabSize": 2,
   "tslint.autoFixOnSave": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "team.showWelcomeMessage": false,
-  "breadcrumbs.enabled": true
+  "breadcrumbs.enabled": true,
+  "editor.formatOnSave": true
 }

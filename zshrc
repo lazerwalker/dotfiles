@@ -117,3 +117,8 @@ HEROKU_AC_ZSH_SETUP_PATH=/Users/lazerwalker/Library/Caches/heroku/autocomplete/z
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [[ -f /Users/lazerwalker/.npm/_npx/9617/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /Users/lazerwalker/.npm/_npx/9617/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.zsh
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/lazerwalker/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lazerwalker/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/lazerwalker/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lazerwalker/google-cloud-sdk/completion.zsh.inc'; fi
