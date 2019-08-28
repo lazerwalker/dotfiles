@@ -87,7 +87,7 @@ apps=(
   ngrok 
   nvalt 
   omnifocus 
-  onepassword
+  1password
   slack 
   soundsource
   spotify
@@ -109,7 +109,7 @@ brew cask cleanup
 brew cleanup
 
 echo "Installing QuickLook plugins..."
-mas_apps=(
+quicklook_plugins=(
   qlcolorcode 
   qlstephen 
   qlmarkdown
@@ -118,10 +118,10 @@ mas_apps=(
   webpquicklook
   qlvideo
 )
-brew cask install ${apps[@]}
+brew cask install ${quicklook_plugins[@]}
 
 echo "Installing the mas tool and some MAS apps"
-mas install (
+mas_apps=(
   451640037 
   418138339 
   928871589 
@@ -132,6 +132,7 @@ mas install (
   425424353
   1384080005
 )
+mas install  ${mas_apps[@]}
 
 echo "Set up Dropbox and Sync!"
 read -p "Press enter when done."
