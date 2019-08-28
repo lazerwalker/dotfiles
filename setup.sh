@@ -17,7 +17,7 @@ echo "Updating homebrew..."
 brew update
 
 echo "Installing things via brew"
-brew install (
+brew_apps=(
   git 
   hub 
   gcc 
@@ -25,6 +25,7 @@ brew install (
   macvim 
   mas
 )
+brew cask install ${brew_apps[@]}
 
 echo "Installing RVM and the latest Ruby..."
 gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
@@ -109,7 +110,7 @@ brew cask cleanup
 brew cleanup
 
 echo "Installing QuickLook plugins..."
-brew cask install (
+mas_apps=(
   qlcolorcode 
   qlstephen 
   qlmarkdown
@@ -118,6 +119,7 @@ brew cask install (
   webpquicklook
   qlvideo
 )
+brew cask install ${apps[@]}
 
 echo "Installing the mas tool and some MAS apps"
 mas install (
