@@ -29,13 +29,13 @@ brew cask install ${brew_apps[@]}
 
 echo "Installing RVM and the latest Ruby..."
 gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-\curl -sSL https://get.rvm.io | bash -s stable
-
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+source ~/.rvm/scripts/rvm
 echo "Installing xcselect and latest Xcode CLI tools"
 gem install xcode-install
 xcversion install-cli-tools
 
-echo "In another CLI tab, run `xcversion list --all` and `xcversion install [latest version]`"
+echo "In another CLI tab, run 'xcversion list --all' and 'xcversion install [latest version]''"
 read -p "Press [Enter] when ready..."
 
 echo "Symlinking gitconfig"
