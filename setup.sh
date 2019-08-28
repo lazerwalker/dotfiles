@@ -45,7 +45,6 @@ echo "Cleaning up brew"
 brew cleanup
 
 echo "Installing homebrew cask"
-brew install caskroom/cask/brew-cask
 brew tap homebrew/cask-fonts
 
 #Install Zsh & Oh My Zsh
