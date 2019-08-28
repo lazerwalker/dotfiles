@@ -45,6 +45,7 @@ brew cleanup
 
 echo "Installing homebrew cask"
 brew install caskroom/cask/brew-cask
+brew tap homebrew/cask-fonts
 
 #Install Zsh & Oh My Zsh
 echo "Installing Oh My ZSH..."
@@ -76,6 +77,7 @@ apps=(
   fantastical 
   firefox
   flux 
+  font-fira-code
   keybase 
   google-chrome 
   iterm2 
@@ -307,11 +309,6 @@ read -p "Press [Enter] when done..."
 
 echo "----------"
 echo "Install Solarized into iTerm and Xcode"
-read -p "Press [Enter] when done..."
-
-echo "----------"
-echo "Download latest Fira Code from https://github.com/tonsky/FiraCode"
-echo "Add all ttf files to Font Book"
 read -p "Press [Enter] when done..."
 
 echo "----------"
