@@ -1,3 +1,5 @@
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
 echo "Creating an SSH key for you..."
 ssh-keygen -t rsa
 
@@ -38,8 +40,8 @@ xcversion install-cli-tools
 echo "In another CLI tab, run 'xcversion list --all' and 'xcversion install [latest version]''"
 read -p "Press [Enter] when ready..."
 
-echo "Symlinking gitconfig"
-ln -s "$dir/gitconfig" ~/.gitconfig
+echo "Symlinking gitconfig from $DIR/gitconfig"
+ln -s "$DIR/gitconfig" ~/.gitconfig
 
 echo "Cleaning up brew"
 brew cleanup
@@ -52,8 +54,8 @@ echo "Installing Oh My ZSH..."
 curl -L http://install.ohmyz.sh | sh
 
 echo "Symlinking zshrc and oh-my-zsh config"
-ln -s "$dir/zshrc" ~/.zshrc
-ln -s "$dir/ohmyzsh-custom" ~/.oh-my-zsh/custom
+ln -s "$DIR/zshrc" ~/.zshrc
+ln -s "$DIR/ohmyzsh-custom" ~/.oh-my-zsh/custom
 
 echo "Setting ZSH as shell..."
 chsh -s /bin/zsh
