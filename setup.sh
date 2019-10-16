@@ -1,10 +1,24 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-echo "Creating an SSH key for you..."
-ssh-keygen -t rsa
+echo "Apple should have already prompted you to install the Xcode CLI tools."
+echo "If that didn't happen, go download those now!"
+read -p "Then press [Enter] to continue."
+echo ""
 
-echo "Please add this public key to Github \n"
-echo "https://github.com/account/ssh \n"
+if [ -f filename ]; then
+  echo "Creating an SSH key for you..."
+  ssh-keygen -t rsa
+else
+  echo "You already have a public key, continuing using existing ~/.ssh/id_rsa.pub"
+  echo ""
+fi
+
+echo "Please go to https://github.com/account/ssh and add the following public key"
+echo "(It should already be in your clipboard, so you can just paste it in)"
+echo "---"
+echo "$(cat ~/.ssh/id_rsa.pub)"
+echo "---"
+cat ~/.ssh/id_rsa.pub | pbcopy
 read -p "Press [Enter] key after this..."
 
 # Check for Homebrew,
