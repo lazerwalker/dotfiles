@@ -88,8 +88,9 @@ apps=(
   encryptme 
   daisydisk 
   dash 
-  deckset
-  dropbox 
+  deckset 
+  # dropbox (currently broken?)
+  discord
   dropshare 
   fantastical 
   firefox
@@ -148,7 +149,12 @@ mas_apps=(
   413965349 # Soulver
   425424353 # The Unarchiver
   1384080005 # Tweetbot
+
   985367838 # Outlook
+
+  # Safari extension (might not work?)
+  1436953057 # Ghostery Lite
+  568494494
 )
 mas install  ${mas_apps[@]}
 
