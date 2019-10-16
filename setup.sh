@@ -122,15 +122,16 @@ brew cask install ${quicklook_plugins[@]}
 
 echo "Installing the mas tool and some MAS apps"
 mas_apps=(
-  451640037 
-  418138339 
-  928871589 
-  1303222628 
-  964792805 
-  525180431 
-  413965349 
-  425424353
-  1384080005
+  451640037 # Classic Color Meter
+  418138339 # HTTP Client
+  928871589 # Noizio
+  1303222628 # Paprika
+  964792805 # ??? Currently unavailable
+  525180431 # Pixen
+  413965349 # Soulver
+  425424353 # The Unarchiver
+  1384080005 # Tweetbot
+  985367838 # Outlook
 )
 mas install  ${mas_apps[@]}
 
