@@ -327,14 +327,30 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 echo "----------"
 echo "Go to keyboard settings and map caps lock to ctrl"
 echo "Then disable autocorrect (spelling, capitalization, 2 spaces -> period)"
+echo "Finally, remove the Spotlight Cmd+Space keyboard shortcut"
 read -p "Press [Enter] when done..."
 
 echo "----------"
-echo "Safari Setup: Manually install extensions for 1password, Ghostery, and AdBlock"
+echo "Set up 1password"
+echo "(Use iCloud for sync)"
+read -p "Press [Enter] when done..."
+
+
+echo "----------"
+echo "Set up Alfred:"
+echo "1. Activate PowerPack (mega supporter license key in 1password)"
+echo "2. Confirm Alfred shortcut is Cmd+Space"
+echo "3. TODO: Do settings sync? Can they sync?"
 read -p "Press [Enter] when done..."
 
 echo "----------"
-echo "Install Solarized into iTerm and Xcode"
+echo "Safari Setup: Manually enable 1password, Ghostery, and Pocket extensions. They should be installed already."
+echo "Then set the default search engine to DuckDuckGo:"
+echo "(Open a new browser tab, then click the magnifying glass in the search/URL bar)"
+read -p "Press [Enter] when done..."
+
+echo "----------"
+echo "Install Solarized into Xcode (TODO: Document this!)"
 read -p "Press [Enter] when done..."
 
 echo "----------"
@@ -342,23 +358,13 @@ echo "Set up your personal mail by going to Fastmail and generating a new app pa
 read -p "Press [Enter] when done..."
 
 echo "----------"
-echo "Set up GCal with an app password. Add it both to the system and to Fantastical"
-read -p "Press [Enter] when done..."
-
-echo "----------"
-echo "Set up Alfred:"
-echo "1. Remove system Spotlight shortcut (Keyboard -> Shortcuts -> Spotlight)"
-echo "2. Confirm Alfred shortcut is Cmd+Space"
-echo "3. Activate PowerPack (license key in 1password)"
-read -p "Press [Enter] when done..."
-
-echo "----------"
 echo "VS Code:"
-echo "TODO for Em: confirm your symlink setup includes extensions"
+echo "TODO for Em: add steps to this file to install extensions via the CLI"
 read -p "Press [Enter] when done..."
 
 echo "----------"
 echo "Set up BetterTouchTool:"
+echo "TODO: Syncing is experimental. Hopefully it'll Just Work next time I need this?"
 echo "1. License is in 1p"
 echo "2. 3-finger swipe up -> Cmd+T"
 echo "3. 3-finger swipe down -> Cmd+W"
@@ -370,13 +376,13 @@ read -p "Press [Enter] when done..."
 
 echo "----------"
 echo "Fantastical:"
+echo "The license is in 1p"
 echo "Set keyboard shortcut to Cmd+Shift+C"
-echo "License is in 1p"
+echo "Set up Google account"
 read -p "Press [Enter] when done..."
 
 echo "----------"
-echo "Set default Safari search engine to DuckDuckGo:"
-echo "Open new browser tab, click magnifying glass in search/URL bar, click DDG"
+echo "Confirm that the Calendar app has set up with my GCal"
 read -p "Press [Enter] when done..."
 
 echo "----------"
@@ -395,12 +401,15 @@ echo "Keyboard shortcut = Cmd+Shift+O"
 read -p "Press [Enter] when done..."
 
 echo "----------"
-echo "Set iTerm font to Fira Code"
-echo "Open Solarized iterm .itermcolors file, then set Preferences -> Profiles -> Colors -> Load presets"
+echo "Set up iTerm"
+echo "Set Solarized Dark (Preferences -> Profiles -> Colors -> Presets)"
+echo "Set Fira code font (Preferences -> Profiles -> Text -> Font. Select it, and also enable ligatures)"
 read -p "Press [Enter] when done..."
+
 
 echo "----------"
 echo "Configure Dropshare"
+echo "TO DO: This is different with Dropshare"
 echo "Settings -> General -> [Start at Login, Install CLI Tools]"
 echo "Connection: bucket name + domain alias are both 'uploads.lazerwalker.com' (get keys from AWS)"
 echo "Uploads: https://dropshare.zendesk.com/hc/en-us/articles/201268771-How-to-set-up-a-custom-URL-shortener"
