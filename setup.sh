@@ -139,6 +139,9 @@ quicklook_plugins=(
 brew cask install ${quicklook_plugins[@]}
 
 echo "Installing the mas tool and some MAS apps"
+echo "First, you must log into the Mac App Store app"
+read -p "Press [Enter] when ready to continue..."
+
 mas_apps=(
   451640037 # Classic Color Meter
   418138339 # HTTP Client
