@@ -51,8 +51,9 @@ source ~/.rvm/scripts/rvm
 echo "Installing xcselect"
 gem install xcode-install
 
-echo "In another CLI tab, run 'xcversion list --all' and 'xcversion install [latest version]''"
-read -p "Press [Enter] when ready..."
+echo "In another CLI tab, run 'xcversion list' and 'xcversion install [latest version]''"
+echo "(This takes forever, and can happen in parallel while the rest of this runs)"
+read -p "Press [Enter] when that's running..."
 
 echo "Symlinking gitconfig from $DIR/gitconfig"
 ln -s "$DIR/gitconfig" ~/.gitconfig
