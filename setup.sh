@@ -105,7 +105,7 @@ apps=(
   ngrok 
   nvalt 
   omnifocus 
-  1password
+  pdfpen
   slack 
   soundsource
   spotify
