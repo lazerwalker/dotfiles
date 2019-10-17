@@ -8,6 +8,10 @@ echo ""
 if [ -f filename ]; then
   echo "Creating an SSH key for you..."
   ssh-keygen -t rsa
+  echo "Add it to the SSH agent!"
+  echo "(https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)"
+  read -p "Press [Enter] when done..."
+  echo ""
 else
   echo "You already have a public key, continuing using existing ~/.ssh/id_rsa.pub"
   echo ""
