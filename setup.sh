@@ -312,6 +312,10 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
 defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Incomplete"
 
+# Remove Mission Control entirely (the pref pane doesn't let you disable the 'drag a window to the top of the screen' interaction, 
+# which conflicts with how I use BetterTouchTool)
+defaults write com.apple.dock mcx-expose-disabled -bool TRUE && killall Dock
+
 killall Finder
 
 echo "Symlinking VSCode settings..."
