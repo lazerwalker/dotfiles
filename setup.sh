@@ -103,6 +103,7 @@ apps=(
   keybase 
   google-chrome 
   iterm2 
+  karabiner-elements
   licecap
   little-snitch 
   macdown 
