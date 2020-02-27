@@ -112,6 +112,8 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Fastlane path
 export PATH="$HOME/.fastlane/bin:$PATH"
 
+export PATH="$(go env GOPATH)/bin:$PATH"
+
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/lazerwalker/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 # tabtab source for electron-forge package
