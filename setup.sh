@@ -105,7 +105,6 @@ apps=(
   firefox
   flux 
   font-fira-code
-  keybase 
   google-chrome 
   iterm2 
   karabiner-elements
@@ -315,13 +314,6 @@ killall Finder
 echo "Symlinking VSCode settings..."
 ln -s "$dir/vscode/keybindings.json" ~/Library/Application\ Support/Code/User/keybindings.json
 ln -s "$dir/vscode/settings.json" ~/Library/Application\ Support/Code/User/settings.json
-
-
-echo "Setting up Keybase..."
-keybase install
-
-echo "Installed, time to log in and add your device..."
-keybase login
 
 echo "Installing nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
