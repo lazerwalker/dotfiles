@@ -136,18 +136,6 @@ brew cask alfred link
 brew cask cleanup
 brew cleanup
 
-echo "Installing QuickLook plugins..."
-quicklook_plugins=(
-  qlcolorcode 
-  qlstephen 
-  qlmarkdown
-  quicklook-json
-  qlimagesize
-  webpquicklook
-  qlvideo
-)
-brew cask install ${quicklook_plugins[@]}
-
 echo "Installing the mas tool and some MAS apps"
 echo "First, you must log into the Mac App Store app"
 read -p "Press [Enter] when ready to continue..."
