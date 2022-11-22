@@ -5,7 +5,7 @@ echo "If that didn't happen, go download those now!"
 read -p "Then press [Enter] to continue."
 echo ""
 
-if [ -f filename ]; then
+if [ -f "/home/lazerwalker/id_rsa.pub" ]; then
   echo "Creating an SSH key for you..."
   ssh-keygen -t rsa
   echo "Add it to the SSH agent!"
@@ -17,20 +17,19 @@ else
   echo ""
 fi
 
-echo "Please go to https://github.com/account/ssh and add the following public key"
-echo "(It should already be in your clipboard, so you can just paste it in)"
-echo "---"
-echo "$(cat ~/.ssh/id_rsa.pub)"
-echo "---"
-cat ~/.ssh/id_rsa.pub | pbcopy
-read -p "Press [Enter] key after this..."
 
 # Check for Homebrew,
 # Install if we don't have it
 if test ! $(which brew); then
   echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  echo '# Set PATH, MANPATH, etc., for Homebrew.' >> ~/.zprofile
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+
 fi
+
 
 # Update homebrew recipes
 echo "Updating homebrew..."
@@ -45,6 +44,7 @@ brew_apps=(
   gpg2 
   macvim 
   mas
+  robotsandpencils/made/xcodes
 )
 brew install ${brew_apps[@]}
 
@@ -53,16 +53,13 @@ git lfs install
 git lfs install --system
 
 echo "Installing RVM and the latest Ruby..."
-gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
 source ~/.rvm/scripts/rvm
 
-echo "Installing xcselect"
-gem install xcode-install
+xcodes install --latest
 
-echo "In another CLI tab, run 'xcversion list' and 'xcversion install [latest version]''"
-echo "(This takes forever, and can happen in parallel while the rest of this runs)"
-read -p "Press [Enter] when that's running..."
+read -p "Not sure how install works. Press [Enter] when that's running..."
 
 echo "Symlinking gitconfig from $DIR/gitconfig"
 ln -s "$DIR/gitconfig" ~/.gitconfig
@@ -73,16 +70,23 @@ brew cleanup
 echo "Installing homebrew cask"
 brew tap homebrew/cask-fonts
 
-#Install Zsh & Oh My Zsh
-echo "Installing Oh My ZSH..."
-curl -L http://install.ohmyz.sh | sh
-
-echo "Symlinking zshrc and oh-my-zsh config"
-ln -s "$DIR/zshrc" ~/.zshrc
-ln -s "$DIR/ohmyzsh-custom" ~/.oh-my-zsh/custom
-
 echo "Setting ZSH as shell..."
 chsh -s /bin/zsh
+
+Echo "Installing starship..."
+curl -sS https://starship.rs/install.sh | sh
+
+Echo "Setting up Starship..."
+eval "$(starship init zsh)"
+
+#Install Zsh & Oh My Zsh
+#echo "Installing Oh My ZSH..."
+#curl -L http://install.ohmyz.sh | sh
+#
+#echo "Symlinking zshrc and oh-my-zsh config"
+#ln -s "$DIR/zshrc" ~/.zshrc
+#ln -s "$DIR/ohmyzsh-custom" ~/.oh-my-zsh/custom
+#
 
 # Apps
 apps=(
@@ -98,13 +102,13 @@ apps=(
   daisydisk 
   dash 
   deckset 
-  # dropbox (currently broken?)
   discord
   dropshare 
   fantastical 
   firefox
   flux 
   font-fira-code
+  font-Fira-Code-nerd-font
   google-chrome 
   iterm2 
   karabiner-elements
@@ -118,6 +122,7 @@ apps=(
   slack 
   soundsource
   spotify
+  standard-notes
   steam
   sync 
   unity-hub
@@ -128,11 +133,10 @@ apps=(
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 echo "Installing apps with Cask..."
-brew cask install --appdir="/Applications" ${apps[@]}
+brew install --appdir="/Applications" ${apps[@]} --cask
 
-brew cask alfred link
+brew alfred link --cask
 
-brew cask cleanup
 brew cleanup
 
 echo "Installing the mas tool and some MAS apps"
@@ -144,18 +148,15 @@ mas_apps=(
   418138339 # HTTP Client
   928871589 # Noizio
   1303222628 # Paprika
-  964792805 # ??? Currently unavailable
   525180431 # Pixen
   413965349 # Soulver
   425424353 # The Unarchiver
-  1384080005 # Tweetbot
-
-  985367838 # Outlook
 
   # Safari extension (might not work?)
   1436953057 # Ghostery Lite
   568494494
 )
+
 mas install  ${mas_apps[@]}
 
 echo "Set up Dropbox and Sync!"

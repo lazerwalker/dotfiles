@@ -1,7 +1,7 @@
 [credential]
 	helper = osxkeychain
 [user]
-	name = Em Lazer-Walker
+	name = Emilia Lazer-Walker
 	email = me@lazerwalker.com
 [filter "lfs"]
 	required = true
