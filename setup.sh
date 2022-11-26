@@ -407,16 +407,19 @@ read -p "Press [Enter] when done..."
 
 echo "----------"
 echo "Configure Dropshare"
-echo "TO DO: This is different with Dropshare"
 echo "Settings -> General -> [Start at Login, Install CLI Tools]"
-echo "Connection: bucket name + domain alias are both 'uploads.lazerwalker.com' (get keys from AWS)"
-echo "Uploads: https://dropshare.zendesk.com/hc/en-us/articles/201268771-How-to-set-up-a-custom-URL-shortener"
+echo "Connection: there's a .dsconn file in the password manager"
+echo "URL Shortener: in 'Uploads'. Bit.ly, domain is lzrwlkr.me, access token in password manager "
 echo "Screenshots -> Legacy Mode -> Enable"
 echo "Sync -> Use it"
 read -p "Press [Enter] when done..."
 
 echo "----------"
 echo "Set up Bartender, using common sense"
+read -p "Press [Enter] when done..."
+
+echo "----------"
+echo "Set up Backblaze. There's an installer app that Alfred may not pick up, it'll be in /opt/homebrew/Caskroom/backblaze/[some folders]"
 read -p "Press [Enter] when done..."
 
 echo "----------"
