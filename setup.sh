@@ -136,6 +136,10 @@ mas_apps=(
 
 mas install  ${mas_apps[@]}
 
+echo "Installing nvm"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+echo "You will want to run 'nvm ls-remote' and then 'nvm install [version]'"
+
 # Set hostname
 echo "what should the hostname be?"
 read hostname
