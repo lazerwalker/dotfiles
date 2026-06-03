@@ -22,7 +22,7 @@ fi
 # Install if we don't have it
 if test ! $(which brew); then
   echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
   echo '# Set PATH, MANPATH, etc., for Homebrew.' >> ~/.zprofile
     echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
@@ -44,7 +44,6 @@ brew_apps=(
   gpg2 
   macvim 
   mas
-  robotsandpencils/made/xcodes
 )
 brew install ${brew_apps[@]}
 
@@ -52,23 +51,12 @@ echo "Setting up git-lfs"
 git lfs install
 git lfs install --system
 
-echo "Installing RVM and the latest Ruby..."
-gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-\curl -sSL https://get.rvm.io | bash -s stable --ruby
-source ~/.rvm/scripts/rvm
-
-xcodes install --latest
-
-read -p "Not sure how install works. Press [Enter] when that's running..."
 
 echo "Symlinking gitconfig from $DIR/gitconfig"
 ln -s "$DIR/gitconfig" ~/.gitconfig
 
 echo "Cleaning up brew"
 brew cleanup
-
-echo "Installing homebrew cask"
-brew tap homebrew/cask-fonts
 
 echo "Setting ZSH as shell..."
 chsh -s /bin/zsh
@@ -79,14 +67,14 @@ curl -sS https://starship.rs/install.sh | sh
 Echo "Setting up Starship..."
 eval "$(starship init zsh)"
 
-#Install Zsh & Oh My Zsh
-#echo "Installing Oh My ZSH..."
-#curl -L http://install.ohmyz.sh | sh
-#
-#echo "Symlinking zshrc and oh-my-zsh config"
-#ln -s "$DIR/zshrc" ~/.zshrc
-#ln -s "$DIR/ohmyzsh-custom" ~/.oh-my-zsh/custom
-#
+Install Zsh & Oh My Zsh
+echo "Installing Oh My ZSH..."
+curl -L http://install.ohmyz.sh | sh
+
+echo "Symlinking zshrc and oh-my-zsh config"
+ln -s "$DIR/zshrc" ~/.zshrc
+ln -s "$DIR/ohmyzsh-custom" ~/.oh-my-zsh/custom
+
 
 # Apps
 apps=(
@@ -94,38 +82,27 @@ apps=(
   alfred 
   android-studio 
   backblaze 
-  bartender 
   bettertouchtool 
   caffeine 
   calibre 
-  encryptme 
   daisydisk 
-  dash 
-  deckset 
   discord
   dropshare 
-  fantastical 
+  fantastical
   firefox
   flux 
-  font-fira-code
-  font-Fira-Code-nerd-font
   google-chrome 
-  iterm2 
-  karabiner-elements
+  ghostty
   licecap
   little-snitch 
-  macdown 
-  ngrok 
-  nvalt 
+  ngrok
+  obsidian
   omnifocus 
   pdfpen
   slack 
-  soundsource
   spotify
   standard-notes
   steam
-  sync 
-  unity-hub
   vlc 
   visual-studio-code
 )
@@ -158,10 +135,6 @@ mas_apps=(
 )
 
 mas install  ${mas_apps[@]}
-
-echo "Set up Dropbox and Sync!"
-read -p "Press enter when done."
-
 
 # Set hostname
 echo "what should the hostname be?"
@@ -325,12 +298,14 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 echo "----------"
 echo "Go to keyboard settings and map caps lock to ctrl"
 echo "Then disable autocorrect (spelling, capitalization, 2 spaces -> period)"
+echo "(Keyboards -> Text Input)"
 echo "Finally, remove the Spotlight Cmd+Space keyboard shortcut"
+echo "(Keyboards -> Keyboard Shortcuts -> Spotlight)"
 read -p "Press [Enter] when done..."
 
 echo "----------"
 echo "Set up 1password"
-echo "(Use iCloud for sync)"
+echo "(and the SSH agent)"
 read -p "Press [Enter] when done..."
 
 
@@ -342,13 +317,9 @@ echo "3. TODO: Do settings sync? Can they sync?"
 read -p "Press [Enter] when done..."
 
 echo "----------"
-echo "Safari Setup: Manually enable 1password, Ghostery, and Pocket extensions. They should be installed already."
+echo "Safari Setup: Open the extensions panel, enable things"
 echo "Then set the default search engine to DuckDuckGo:"
 echo "(Open a new browser tab, then click the magnifying glass in the search/URL bar)"
-read -p "Press [Enter] when done..."
-
-echo "----------"
-echo "Install Solarized into Xcode (TODO: Document this!)"
 read -p "Press [Enter] when done..."
 
 echo "----------"
@@ -389,23 +360,6 @@ echo "Enable tap to click"
 read -p "Press [Enter] when done..."
 
 echo "----------"
-echo "Siri settings: move from Cmd+Space to Option+Space"
-read -p "Press [Enter] when done..."
-
-echo "----------"
-echo "Set up OmniFocus"
-echo "OmniSyncServer and license key in 1p"
-echo "Keyboard shortcut = Cmd+Shift+O"
-read -p "Press [Enter] when done..."
-
-echo "----------"
-echo "Set up iTerm"
-echo "Set Solarized Dark (Preferences -> Profiles -> Colors -> Presets)"
-echo "Set Fira code font (Preferences -> Profiles -> Text -> Font. Select it, and also enable ligatures)"
-read -p "Press [Enter] when done..."
-
-
-echo "----------"
 echo "Configure Dropshare"
 echo "Settings -> General -> [Start at Login, Install CLI Tools]"
 echo "Connection: there's a .dsconn file in the password manager"
@@ -415,7 +369,7 @@ echo "Sync -> Use it"
 read -p "Press [Enter] when done..."
 
 echo "----------"
-echo "Set up Bartender, using common sense"
+echo "Set up Ice, using common sense"
 read -p "Press [Enter] when done..."
 
 echo "----------"
